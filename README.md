@@ -1,9 +1,9 @@
 # Cluster.dev 
 ![cluster.dev](https://img.shields.io/badge/cluster-.dev-purple?style=plastic)
 ## Create Complete Kubernetes-based Dev Enviornment in Minutes
-Cluster.dev is open source system delivered as Docker Image or GitHub Action 
+Cluster.dev is an open source system delivered as Docker Image or GitHub Action 
 for creating and managing Kubernetes clusters with simple manifests.  
-Designed for developers that are bored to configure Kubernetes stuff
+Designed for developers that are bored of configuring Kubernetes stuff
 and just need: kubeconfig, dashboard, logging and monitoring out of the box.  
 
 Based on DevOps and SRE best-practices. GitOps cluster management and application delivery.
@@ -54,14 +54,14 @@ aws_access_key_id =  ATIAAJSXDBUVOQ4JR
 aws_secret_access_key = SuperAwsSecret
 ```
 
-Thats it! Just push update and Cluster.dev would create you a cluster in minutes.
+That's it! Just push update and Cluster.dev will create you a cluster in minutes.
 And produce a working kubeconfig that could be downloaded and links to differnet UI's: Kibana, Grafana, Dashboard, etc...
 
 ## How it works
 
-In background: 
+In the background: 
 
  - Terraform creates a remote state file where all infrastructure objects are stored.
    Typically it is defined on Cloud Object Storage like AWS S3.
- - Terraform modules creates Minikube/EKS/GKE/etc.. cluster within your Cloud Proivder using      Account credentials
+ - Terraform modules create Minikube/EKS/GKE/etc.. cluster within your Cloud Proivder using      Account credentials
  - Produced kubeconfig should be generated and passed to value into target git repo credentials
